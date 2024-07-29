@@ -1,5 +1,5 @@
 // base
-$base-unit: 0.500em;
+$base: 0.500em;
 
 // viewports
 $screen-sm: 60em;
@@ -13,7 +13,7 @@ $screen-lg: 93em;
     flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 ($base-unit * -1) 0 ($base-unit * -1);
+    margin: 0 ($base * -1) 0 ($base * -1);
     // modifier to remove gutters
     &.grid-nogutter {
         margin: 0;
@@ -30,7 +30,7 @@ $screen-lg: 93em;
     flex-basis: 0;
     max-width: 100%;
     min-width: 0;
-    padding: 0 $base-unit 0 $base-unit;
+    padding: 0 $base 0 $base;
 
     @media only screen and (max-width: $screen-sm) {
         &.col-sm {
