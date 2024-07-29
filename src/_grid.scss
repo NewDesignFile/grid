@@ -14,6 +14,7 @@ $screen-lg: 93em;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 ($base * -1) 0 ($base * -1);
+
     // modifier to remove gutters
     &.grid-nogutter {
         margin: 0;
@@ -32,24 +33,12 @@ $screen-lg: 93em;
     min-width: 0;
     padding: 0 $base 0 $base;
 
-    @media only screen and (max-width: $screen-sm) {
-        &.col-sm {
-            flex: 100%;
-            max-width: 100%;
-        }
-    }
-
-    @media only screen and (max-width: $screen-md) {
-        &.col-md {
-            flex: 100%;
-            max-width: 100%;
-        }
-    }
-
-    @media only screen and (max-width: $screen-lg) {
-        &.col-lg {
-            flex: 100%;
-            max-width: 100%;
+    @each $size, $screen in (sm: $screen-sm, md: $screen-md, lg: $screen-lg) {
+        @media only screen and (max-width: $screen) {
+            &.col-#{$size} {
+                flex: 100%;
+                max-width: 100%;
+            }
         }
     }
 }
@@ -70,22 +59,21 @@ $screen-lg: 93em;
 }
 
 // content alignment
-.col-top {
-    justify-content: flex-start !important;
+.col-top, .col-bottom, .col-middle {
     flex-direction: column;
     display: flex;
+}
+
+.col-top {
+    justify-content: flex-start !important;
 }
 
 .col-bottom {
     justify-content: flex-end !important;
-    flex-direction: column;
-    display: flex;
 }
 
 .col-middle {
     justify-content: center;
-    flex-direction: column;
-    display: flex;
 }
 
 // horizontal grid alignment
