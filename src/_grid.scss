@@ -2,9 +2,9 @@
 $base: 0.500em;
 
 // viewports
-$screen-sm: 60em;
-$screen-md: 78em;
-$screen-lg: 93em;
+$screen-sm: 480px; // 30em * 16px
+$screen-md: 1024px; // 64em * 16px
+$screen-lg: 1360px; // 85em * 16px
 
 // flex Grid
 .grid {
