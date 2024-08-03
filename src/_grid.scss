@@ -3,14 +3,13 @@ $base: 0.5rem;
 
 // Viewports
 $breakpoints: (
-  sm: 30rem,  // 480px
-  md: 64rem,  // 1024px
-  lg: 85rem   // 1360px
+  sm: 30rem,
+  md: 64rem,
+  lg: 85rem 
 );
 
 // Flex Grid
 .grid {
-  box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   margin: 0 (-$base);
@@ -25,7 +24,6 @@ $breakpoints: (
 }
 
 .col {
-  box-sizing: border-box;
   flex: 1 0 0%;
   max-width: 100%;
   min-width: 0;

@@ -1,7 +1,7 @@
 {
   "name": "@new-ui/grid",
-  "version": "0.0.5",
-  "description": "Flex grid.",
+  "version": "0.0.6",
+  "description": "Lightweight flex grid",
   "source": "src/index.scss",
   "main": "dist/index.css",
   "targets": {
@@ -20,7 +20,8 @@
     "flex",
     "layout",
     "flexbox",
-    "lite"
+    "light",
+    "responsive"
   ],
   "author": "@planetabhi",
   "license": "MIT",
